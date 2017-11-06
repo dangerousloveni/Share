@@ -14,15 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_gravity="center_vertical"
-        android:gravity="center_vertical"
+        android:layout_weight="1"
         android:background="@drawable/search_home_shape"
         android:drawableLeft="@drawable/home_search_icon"
         android:drawablePadding="10dp"
+        android:gravity="center_vertical"
         android:hint="输入搜索信息"
         android:padding="5dp"
-        android:layout_weight="1"
-        android:textSize="15sp"
         android:singleLine="true"
+        android:textSize="15sp"
 
         />
 
