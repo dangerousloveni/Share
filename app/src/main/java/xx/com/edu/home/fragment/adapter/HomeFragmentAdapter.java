@@ -29,7 +29,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
 
      public static final int BANNER=0;
      public static final int LIST=1;
-     public static final int VIEDIO=2;
+     public static final int HOT=2;
     private  Context context;
     private  LayoutInflater mLayoutInflater;
 
@@ -100,8 +100,8 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             case LIST:
                 currentType=LIST;
                 break;
-            case VIEDIO:
-                currentType=VIEDIO;
+            case HOT:
+                currentType=HOT;
                 break;
 
         }
