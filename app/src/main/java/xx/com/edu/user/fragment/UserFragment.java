@@ -28,6 +28,6 @@ public class UserFragment extends BaseFragment {
     public void initData() {
 
         super.initData();
-        textView.setText("个人中心的内容");
+        textView.setText("个人中心的内容1");
     }
 }
