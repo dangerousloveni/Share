@@ -2,121 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0FFF0">
+    android:background="#eee">
     <include
         layout="@layout/titlebar_my"></include>
 
-    <RelativeLayout
-        android:layout_marginTop="1dp"
+    <GridView
+        android:id="@+id/mes_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="#FFFFFF">
-    <ImageView
-        android:layout_centerVertical="true"
-        android:src="@drawable/mes_already"
-        android:layout_width="30dp"
-        android:layout_height="30dp"  />
-
-        <TextView
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:text="我已发布"
-            android:textSize="20sp"/>
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:src="@drawable/mes_arrow"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_marginTop="2dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="#FFFFFF">
-        <ImageView
-            android:layout_centerVertical="true"
-            android:src="@drawable/mes_receive"
-            android:layout_width="30dp"
-            android:layout_height="30dp"  />
-
-        <TextView
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:text="我已接受"
-            android:textSize="20sp"/>
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:src="@drawable/mes_arrow"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_marginTop="2dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="#FFFFFF">
-        <ImageView
-            android:layout_centerVertical="true"
-            android:src="@drawable/mes_collection"
-            android:layout_width="30dp"
-            android:layout_height="30dp"  />
-
-        <TextView
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:text="我的收藏"
-            android:textSize="20sp"/>
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:src="@drawable/mes_arrow"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_marginTop="2dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="#FFFFFF">
-        <ImageView
-            android:layout_centerVertical="true"
-            android:src="@drawable/mes_release"
-            android:layout_width="30dp"
-            android:layout_height="30dp"  />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:text="我要发布"
-            android:textSize="20sp"/>
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:src="@drawable/mes_arrow"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
-
+        android:horizontalSpacing="10dp"
+        android:numColumns="1"
+        android:background="#fff"></GridView>
     <TextView
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="最近浏览"/>
+
+
 
 </LinearLayout>
