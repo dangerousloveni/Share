@@ -28,6 +28,6 @@ public class MessageFragment extends BaseFragment {
     public void initData() {
 
         super.initData();
-        textView.setText("消息内容");
+        textView.setText("消息内容232323");
     }
 }
