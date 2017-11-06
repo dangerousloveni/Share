@@ -1,5 +1,6 @@
 package xx.com.edu.message.fragment;
 
+import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
@@ -21,7 +22,7 @@ import xx.com.edu.home.fragment.adapter.HomeFragmentAdapter;
  * @updateAuthor $Author$
  * @updateDes ${TODD}
  */
-public class MessageFragment extends BaseFragment {
+public class MessageFragment extends BaseFragment{
     private GridView gridView;
 
     @Override
@@ -32,7 +33,8 @@ public class MessageFragment extends BaseFragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(mContext,"position"+i,Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(mContext,MessageReleaseActivity.class);
+                startActivity(intent);
             }
         });
         return view;
