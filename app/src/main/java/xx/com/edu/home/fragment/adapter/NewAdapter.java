@@ -42,8 +42,18 @@ class  NewAdapter  extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
-
+        if(convertView==null)
+        {
             convertView=View.inflate(mContext, R.layout.new_item,null);
+            viewHolder=new ViewHolder();
+            viewHolder.imageView= (ImageView) convertView.findViewById(R.id.iv_photo);
+            viewHolder.txt_them= (TextView) convertView.findViewById(R.id.tv_Theme);
+            viewHolder.txt_content= (TextView) convertView.findViewById(R.id.tv_Content);
+              viewHolder.txt_phone=(TextView)convertView.findViewById(R.id.tv_phone);
+            viewHolder.txt_name= (TextView) convertView.findViewById(R.id.tv_name);
+
+        }
+
 
         return convertView;
     }
@@ -52,6 +62,7 @@ class  NewAdapter  extends BaseAdapter{
         TextView txt_them;
         TextView txt_content;
         TextView txt_phone;
+        TextView txt_name;
 
 
     }
