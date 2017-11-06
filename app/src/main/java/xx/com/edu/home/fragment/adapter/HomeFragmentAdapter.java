@@ -32,7 +32,8 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
 
      public static final int BANNER=0;
      public static final int LIST=1;
-     public static final int HOT=2;
+     public static final int NEW=2;
+     public  static final int HOT=3;
     private  Context context;
     private  LayoutInflater mLayoutInflater;
 
@@ -52,6 +53,11 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
         if(viewType==LIST)
         {
             return  new ChannelViewHolder(context,mLayoutInflater.inflate(R.layout.channel_item,null));
+        }
+        if(viewType==NEW)
+        {
+            return  new NewViewHolder(context,mLayoutInflater.inflate(R.layout.new_view,null));
+
         }
         return null;
     }
@@ -95,12 +101,18 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             ChannelViewHolder channelViewHolder=(ChannelViewHolder) holder;
             channelViewHolder.setData();
         }
+        if(getItemViewType(position)==NEW)
+        {
+            NewViewHolder newViewHolder= (NewViewHolder) holder;
+            newViewHolder.setData();
+
+        }
 
     }
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 3;
     }
    //得到类型
     @Override
@@ -112,9 +124,13 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             case LIST:
                 currentType=LIST;
                 break;
+            case NEW:
+                currentType=NEW;
+                break;
             case HOT:
                 currentType=HOT;
                 break;
+
 
         }
         return currentType;
@@ -140,6 +156,25 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
         {
             adapter=new ChannelAdapter(mContext);
             gv_channel.setAdapter(adapter);
+        }
+
+    }
+
+    private class NewViewHolder extends RecyclerView.ViewHolder {
+        private Context mContext;
+        private GridView gv_new;
+        private NewAdapter adpter;
+        public NewViewHolder(Context context, View itemView) {
+            super(itemView);
+            this.mContext=context;
+           gv_new= (GridView) itemView.findViewById(R.id.gv_new);
+
+        }
+        public  void setData()
+        {
+
+                  adpter=new NewAdapter(mContext);
+              gv_new.setAdapter(adpter);
         }
 
     }

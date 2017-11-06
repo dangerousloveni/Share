@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+<ImageView
+    android:id="@+id/iv_photo"
+    android:layout_width="70dp"
+    android:layout_height="85dp"
+    android:src="@drawable/user1"
+    android:layout_alignParentLeft="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="消息主题："
+        android:textSize="12sp"
+        android:layout_toRightOf="@+id/iv_photo"
+        android:layout_alignParentTop="true"
+        android:id="@+id/tv_theme"
+        android:textColor="#000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+
+</RelativeLayout>
