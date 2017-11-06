@@ -37,7 +37,7 @@ public class HomeFragment extends BaseFragment {
         tv_search_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext,"搜索",Toast.LENGTH_SHORT);
+                Toast.makeText(mContext,"搜索",Toast.LENGTH_SHORT).show();
             }
         });
     }
