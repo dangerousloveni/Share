@@ -3,7 +3,7 @@ package xx.com.edu.home.fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import xx.com.edu.R;
@@ -19,16 +19,17 @@ import xx.com.edu.home.fragment.adapter.HomeFragmentAdapter;
  */
 public class HomeFragment extends BaseFragment {
     private RecyclerView rv_home;
-   private TextView tv_search_home;
+   private EditText tv_search_home;
     private HomeFragmentAdapter adapter;
     @Override
     public View initView() {
       View view=View.inflate(mContext, R.layout.fragment_home,null);
-        tv_search_home=view.findViewById(R.id.tv_search_home);
-        rv_home= view.findViewById(R.id.rv_home);
+        tv_search_home= (EditText) view.findViewById(R.id.tv_search_home);
+        rv_home= (RecyclerView) view.findViewById(R.id.rv_home);
         adapter=new HomeFragmentAdapter(mContext);
         rv_home.setAdapter(adapter);
         rv_home.setLayoutManager(new GridLayoutManager(mContext,1));
+
         initListener();
         return view;
     }
@@ -38,6 +39,7 @@ public class HomeFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(mContext,"搜索",Toast.LENGTH_SHORT).show();
+
             }
         });
     }

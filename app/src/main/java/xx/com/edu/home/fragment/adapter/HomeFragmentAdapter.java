@@ -5,7 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.youth.banner.Banner;
@@ -46,6 +49,10 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
         {
                  return  new BannerViewHolder(context,mLayoutInflater.inflate(R.layout.banner_viewpager,null));
         }
+        if(viewType==LIST)
+        {
+            return  new ChannelViewHolder(context,mLayoutInflater.inflate(R.layout.channel_item,null));
+        }
         return null;
     }
     class  BannerViewHolder extends  RecyclerView.ViewHolder{
@@ -56,7 +63,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
         public BannerViewHolder(Context context, View itemView) {
             super(itemView);
             this.context=context;
-             this.banner=itemView.findViewById(R.id.banner);
+             this.banner= (Banner) itemView.findViewById(R.id.banner);
         }
 
         public void setData() {
@@ -83,12 +90,17 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             BannerViewHolder bannerViewHolder= (BannerViewHolder) holder;
             bannerViewHolder.setData();
         }
+        if (getItemViewType(position)==LIST)
+        {
+            ChannelViewHolder channelViewHolder=(ChannelViewHolder) holder;
+            channelViewHolder.setData();
+        }
 
     }
 
     @Override
     public int getItemCount() {
-        return 1;
+        return 2;
     }
    //得到类型
     @Override
@@ -106,5 +118,29 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
 
         }
         return currentType;
+    }
+
+    private class ChannelViewHolder extends RecyclerView.ViewHolder {
+        private Context mContext;
+        private GridView gv_channel;
+        private ChannelAdapter adapter;
+        public ChannelViewHolder(Context context, View itemView) {
+            super(itemView);
+            this.mContext=context;
+            gv_channel=(GridView)itemView.findViewById(R.id.gv_channel);
+            gv_channel.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Toast.makeText(mContext,"position"+i,Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        }
+        public void setData()
+        {
+            adapter=new ChannelAdapter(mContext);
+            gv_channel.setAdapter(adapter);
+        }
+
     }
 }
