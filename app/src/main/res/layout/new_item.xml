@@ -10,7 +10,7 @@
     android:layout_height="85dp"
     android:src="@drawable/user1"
     android:layout_alignParentLeft="true"
-    android:layout_marginLeft="3dp"/>
+    android:layout_marginLeft="1dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,6 +20,7 @@
         android:layout_alignParentTop="true"
         android:id="@+id/tv_theme"
         android:textColor="#000"
+        android:layout_marginLeft="3dp"
         />
     <TextView
         android:id="@+id/tv_Theme"
@@ -37,6 +38,7 @@
         android:layout_alignLeft="@+id/tv_theme"
          android:layout_below="@+id/tv_theme"
         android:id="@+id/tv_content"
+        android:layout_marginLeft="2.1dp"
         android:textColor="#000"
         />
     <TextView
@@ -61,6 +63,7 @@
         android:layout_toRightOf="@+id/iv_photo"
         android:layout_marginTop="70dp"
          android:id="@+id/iv_users"
+        android:layout_marginLeft="3dp"
         />
     <TextView
         android:layout_width="wrap_content"

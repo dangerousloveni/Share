@@ -197,8 +197,8 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
 
         private Context mContext;
         private ViewPager act_viewpanger;
-        private int[] arrImages = new int[]{R.drawable.show1,R.drawable.show2,
-                R.drawable.show3
+        private int[] arrImages = new int[]{R.drawable.show1,R.drawable.show3,
+                R.drawable.show2
         };
 
         public ActViewHolder(Context mContext, View itemView) {
@@ -218,6 +218,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             //setPageTransformer 决定动画效果
             act_viewpanger.setPageTransformer(true, new
                     ScaleInTransformer());
+
             act_viewpanger.setAdapter(new PagerAdapter() {
                 @Override
                 public int getCount() {
@@ -243,6 +244,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
                             Toast.makeText(mContext, "position==" + position, Toast.LENGTH_SHORT).show();
                         }
                     });
+
                     return imageView;
                 }
 
@@ -251,6 +253,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
                     container.removeView((View) object);
                 }
             });
+            act_viewpanger.setCurrentItem(1);
         }
     }
 }
