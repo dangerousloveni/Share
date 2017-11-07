@@ -14,6 +14,7 @@ import android.widget.Toast;
 import xx.com.edu.R;
 import xx.com.edu.base.BaseFragment;
 import xx.com.edu.home.fragment.adapter.HomeFragmentAdapter;
+import xx.com.edu.home.fragment.adapter.NewAdapter;
 
 /**
  * @author Administrator
@@ -24,7 +25,7 @@ import xx.com.edu.home.fragment.adapter.HomeFragmentAdapter;
  */
 public class MessageFragment extends BaseFragment{
     private GridView gridView;
-
+    private GridView gridView2;
     @Override
     public View initView() {
         View view=View.inflate(mContext, R.layout.fragment_message,null);
@@ -37,6 +38,9 @@ public class MessageFragment extends BaseFragment{
                 startActivity(intent);
             }
         });
+
+        gridView2=(GridView)view.findViewById(R.id.mes_grid2);
+        gridView2.setAdapter(new NewAdapter(mContext));
         return view;
     }
 
