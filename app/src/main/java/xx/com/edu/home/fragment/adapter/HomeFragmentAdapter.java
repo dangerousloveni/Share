@@ -173,21 +173,9 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             gv_channel.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    switch (i){
-                        case 0:
-                            intent=new Intent(mContext,MessageListActivity.class);
-                            intent.putExtra("position",i);
-                            mContext.startActivity(intent);
-                            break;
-                        case 1:
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            intent=new Intent(mContext,MessageReleaseActivity.class);
-                            mContext.startActivity(intent);
-                            break;
-                    }
+                    intent=new Intent(mContext,MessageListActivity.class);
+                    intent.putExtra("position",i+2);
+                    mContext.startActivity(intent);
                 }
             });
 
