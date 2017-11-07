@@ -1,9 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <include
+        android:id="@+id/title_personcenter"
+        layout="@layout/titlebar_my"></include>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:background="@drawable/user_background"/>
+        android:background="@drawable/user_background"
+        android:id="@+id/imageView_usercenter"
+        android:layout_below="@+id/title_personcenter"/>
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/photo_usercenter"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/userfragment_touxiang"
+        app:civ_border_color="#0e000000"
+        app:civ_border_width="2dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="115dp"
+        android:layout_below="@+id/title_personcenter"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/name_usercenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="” 东阳 、"
+        android:textSize="28dp"
+        android:layout_below="@+id/imageView_usercenter"
+        android:layout_toRightOf="@+id/photo_usercenter"
+        android:gravity="center"
+        android:padding="5dp"/>
+<GridView
+    android:id="@+id/grid_usercenter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/photo_usercenter"
+    android:layout_marginTop="10dp"></GridView>
 </RelativeLayout>

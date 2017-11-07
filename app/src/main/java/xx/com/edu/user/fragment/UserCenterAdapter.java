@@ -1,4 +1,4 @@
-package xx.com.edu.message.fragment;
+package xx.com.edu.user.fragment;
 
 import android.content.Context;
 import android.view.View;
@@ -6,30 +6,30 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import xx.com.edu.R;
 
-
 /**
- * Created by SwordIng on 2017/11/6.
+ * Created by SwordIng on 2017/11/7.
  */
 
-public class MessageAdapter extends BaseAdapter {
+public class UserCenterAdapter extends BaseAdapter {
     private Context mContext;
     private String[] arrText = new String[]{
-            "我已发布","我已接受","我的收藏","我要发布"   };
-    private int[] arrImages = new int[]{R.drawable.mes_already,
-            R.drawable.mes_receive,
-            R.drawable.mes_collection,
-            R.drawable.mes_release
+            "资料","钱包","签到"};
+    private int[] arrImages = new int[]{
+            R.drawable.person_usercenter,
+            R.drawable.wallet_usercenter,
+            R.drawable.sign_usercenter
     };
 
-    public MessageAdapter(Context context) {
+    public UserCenterAdapter(Context context) {
         this.mContext=context;
     }
 
     @Override
     public int getCount() {
-        return 4;
+        return 3;
     }
 
     @Override
@@ -44,17 +44,17 @@ public class MessageAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        MessageAdapter.ViewHolder viewHolder;
+        UserCenterAdapter.ViewHolder viewHolder;
 
         if(view ==null) {
             view = View.inflate(mContext, R.layout.mes_item, null);
-            viewHolder=new MessageAdapter.ViewHolder();
+            viewHolder=new UserCenterAdapter.ViewHolder();
             viewHolder.iv_icon= (ImageView) view.findViewById(R.id.mes_image);
             viewHolder.tv_title= (TextView) view.findViewById(R.id.mes_txt);
             view.setTag(viewHolder);
         }
         else {
-            viewHolder=(MessageAdapter.ViewHolder) view.getTag();
+            viewHolder=(UserCenterAdapter.ViewHolder) view.getTag();
         }
         viewHolder.iv_icon.setImageResource(arrImages[i]);
         viewHolder.tv_title.setText(arrText[i]);

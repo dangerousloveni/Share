@@ -1,20 +1,16 @@
 package xx.com.edu.message.fragment;
 
 import android.content.Intent;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.GridView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import xx.com.edu.R;
 import xx.com.edu.base.BaseFragment;
-import xx.com.edu.home.fragment.adapter.HomeFragmentAdapter;
 import xx.com.edu.home.fragment.adapter.NewAdapter;
+import xx.com.edu.message.fragment.activity.MessageListActivity;
+import xx.com.edu.message.fragment.activity.MessageReleaseActivity;
+import xx.com.edu.message.fragment.adapter.MessageAdapter;
 
 /**
  * @author Administrator
@@ -26,6 +22,7 @@ import xx.com.edu.home.fragment.adapter.NewAdapter;
 public class MessageFragment extends BaseFragment{
     private GridView gridView;
     private GridView gridView2;
+    Intent intent;
     @Override
     public View initView() {
         View view=View.inflate(mContext, R.layout.fragment_message,null);
@@ -34,8 +31,19 @@ public class MessageFragment extends BaseFragment{
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent=new Intent(mContext,MessageReleaseActivity.class);
-                startActivity(intent);
+                switch (i){
+                    case 0:case 1:
+                        intent=new Intent(mContext,MessageListActivity.class);
+                        intent.putExtra("position",i);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        intent=new Intent(mContext,MessageReleaseActivity.class);
+                        startActivity(intent);
+                        break;
+                }
             }
         });
 
