@@ -42,6 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="肖老板"
+                android:id="@+id/tv_ssname"
                 android:layout_toRightOf="@id/tv_sname"
                 android:textSize="20dp"/>
             <TextView
@@ -71,6 +72,7 @@
                 android:layout_toRightOf="@+id/im_userphone"
                 android:text="联系方式："
                 android:textColor="#000"
+
                 android:layout_marginTop="5dp"
                 android:id="@+id/tv_sphone"
                 android:layout_marginLeft="5dp"
@@ -83,6 +85,7 @@
                 android:layout_toRightOf="@id/tv_sphone"
                 android:layout_below="@+id/tv_ssex"
                 android:layout_marginTop="5dp"
+                android:id="@+id/tv_ssphone"
                 android:textSize="20dp"/>
         </RelativeLayout>
     </LinearLayout>
@@ -108,9 +111,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="消息主题"
-                    android:textColor="#000"
+                    android:textColor="#f00"
                     android:layout_centerHorizontal="true"
-                    android:textSize="15dp"/>
+                    android:textSize="17dp"/>
                 <ImageView
                     android:layout_marginTop="6dp"
                     android:layout_width="120dp"
@@ -127,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:text="我的的我的的我"
                 android:textSize="25dp"
-                android:textColor="#f00"
+                android:textColor="#000"
                 android:gravity="center_horizontal"
                 android:singleLine="true"
                 android:id="@+id/tv_stheme"
@@ -152,9 +155,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="消息内容"
-                    android:textColor="#000"
+                    android:textColor="#f00"
                     android:layout_centerHorizontal="true"
-                    android:textSize="15dp"/>
+                    android:textSize="17dp"/>
                 <ImageView
                     android:layout_marginTop="6dp"
                     android:layout_width="120dp"
@@ -168,16 +171,90 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="我的的我的的我"
+                android:layout_height="230dp"
+                android:text="的我我的的我的的我我的的我的的我我的的我的的我"
                 android:textSize="25dp"
-                android:textColor="#f00"
-                android:gravity="center_horizontal"
+                android:textColor="#000"
                 android:id="@+id/tv_scontent"
                 />
         </LinearLayout>
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="2dp"
+       android:background="#eeee"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_height="wrap_content">
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+             >
+               <ImageView
+                   android:id="@+id/time_clock"
+                   android:layout_width="30dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/clock"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="发布时间："
+                   android:textSize="16dp"
+                   android:textColor="#000"
+                   android:layout_toRightOf="@+id/time_clock"
+                   android:layout_marginTop="9dp"
+                   android:id="@+id/push_time"
+                   android:layout_marginLeft="4dp"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="9dp"
+                   android:layout_marginLeft="1dp"
+                   android:text="2017/11/7 19:30"
+                   android:textSize="16dp"
+                   android:layout_toRightOf="@+id/push_time"/>
 
 
+           </RelativeLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+               <ImageView
+                   android:id="@+id/item_biao"
+                   android:layout_width="30dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/biaoqian"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="标签："
+                   android:textSize="16dp"
+                   android:textColor="#000"
+                   android:layout_toRightOf="@+id/item_biao"
+                   android:layout_marginTop="9dp"
+                   android:id="@+id/biaoqian"
+                   android:layout_marginLeft="4dp"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="9dp"
+                   android:layout_marginLeft="1dp"
+                   android:text="就业 求职 高薪"
+                   android:textSize="16dp"
+                   android:layout_toRightOf="@+id/biaoqian"/>
+
+
+           </RelativeLayout>
+       </LinearLayout>
+
+   </LinearLayout>
 
 
 
