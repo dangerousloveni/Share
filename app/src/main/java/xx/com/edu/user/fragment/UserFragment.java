@@ -22,6 +22,7 @@ public class UserFragment extends BaseFragment {
     }
 
 
+
     @Override
     public void initData() {
         super.initData();
