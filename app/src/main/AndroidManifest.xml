@@ -19,6 +19,7 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".message.fragment.activity.MessageListActivity"/>
         <activity android:name=".message.fragment.activity.MessageReleaseActivity"/>
+        <activity android:name=".MessageInfoActivity"></activity>
     </application>
 
 </manifest>
