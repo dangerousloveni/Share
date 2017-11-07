@@ -20,7 +20,7 @@ import xx.com.edu.R;
 public class  NewAdapter  extends BaseAdapter{
 
      private final Context mContext;
-    private int[] images= new  int[] {R.drawable.user1,R.drawable.uesr2,R.drawable.user3};
+    private int[] images= new  int[] {R.drawable.userphoto5,R.drawable.uesr2,R.drawable.user3};
     private String[] txtthem=new String[] {"腾讯云校招大会","爱奇艺会员转卖","低价卖流量"};
     private String[] txtContent=new String[]{"面向大四毕业的学生，时间2017年12月3号，地点创业园，希望软件学院的同学踊跃参加",
     "低价会员专买，6块钱一个月，看上的加Q1254127856","湖南省流量5元10G，仅限联通"};

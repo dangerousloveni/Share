@@ -19,7 +19,7 @@ import xx.com.edu.R;
 public class HotAdapter extends BaseAdapter{
 
      private final Context mContext;
-   private int[] images= new  int[] {R.drawable.userphoto2,R.drawable.uersphoto4,R.drawable.userphoto1};
+   private int[] images= new  int[] {R.drawable.userphoto2,R.drawable.userphoto1,R.drawable.uersphoto4};
     private String[] txtthem=new String[] {"富士康招聘","2018星火教育宣讲会","考研英语长难句攻破"};
    private String[] txtContent=new String[]{"地点南华就业厅，时间2017年11月12日18.30",
           "年薪6w-12w 时间2017/12/22地点南华就业厅3楼","由何凯文老师主讲，时间12月3号晚七点，文都弘辰教室与你们不见不散"};
