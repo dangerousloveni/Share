@@ -189,6 +189,12 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             super(itemView);
             this.mContext = context;
             gv_new = (GridView) itemView.findViewById(R.id.gv_new);
+            gv_new.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Toast.makeText(mContext, "position" + i, Toast.LENGTH_SHORT).show();
+                }
+            });
 
         }
 
@@ -213,6 +219,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             super(itemView);
             this.mContext = mContext;
             act_viewpanger = (ViewPager) itemView.findViewById(R.id.act_viewpager);
+
         }
 
         public void setData() {
@@ -272,6 +279,12 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             super(itemView);
             this.mContext=context;
             gv_hot= (GridView) itemView.findViewById(R.id.gv_hot);
+            gv_hot.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Toast.makeText(mContext, "position" + i, Toast.LENGTH_SHORT).show();
+                }
+            });
         }
         public void setData(){
             adpter= new HotAdapter(mContext);

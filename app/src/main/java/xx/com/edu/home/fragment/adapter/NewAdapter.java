@@ -16,7 +16,7 @@ import xx.com.edu.R;
  * @updateAuthor $Author$
  * @updateDes ${TODD}
  */
-class  NewAdapter  extends BaseAdapter{
+public class  NewAdapter  extends BaseAdapter{
 
      private final Context mContext;
     private int[] images= new  int[] {R.drawable.user1,R.drawable.uesr2,R.drawable.user3};

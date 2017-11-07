@@ -16,7 +16,7 @@ import xx.com.edu.R;
  * @updateAuthor $Author$
  * @updateDes ${TODD}
  */
-class ChannelAdapter  extends BaseAdapter{
+public class ChannelAdapter  extends BaseAdapter{
     private  Context mContext;
     private String[] arrText = new String[]{
           "就业","娱乐","知识","其他"   };
