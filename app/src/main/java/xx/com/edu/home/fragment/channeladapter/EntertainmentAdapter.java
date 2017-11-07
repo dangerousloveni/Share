@@ -17,12 +17,12 @@ import xx.com.edu.R;
 public class EntertainmentAdapter extends BaseAdapter {
 
     private final Context mContext;
-    private int[] images= new  int[] {R.drawable.userfragment_touxiang,R.drawable.userfragment_touxiang,R.drawable.userfragment_touxiang};
-    private String[] txtthem=new String[] {"新店特惠","快递兼职","发单兼职"};
-    private String[] txtContent=new String[]{"荣记餐馆开业大酬宾，满",
-            "60名，男女不限，主要工作：快递分拣、扫描、打包等室内工作","招发单兼职人员四名，工资日结60，鸽子酱油尸体勿扰！"};
-    private String[] txtName=new String[]{"东阳、","东阳、","东阳、"};
-    private String[] phone=new String[]{"15333328275","15333328275","15333328275"};
+    private int[] images= new  int[] {R.drawable.temp_user12,R.drawable.temp_user6,R.drawable.temp_user8};
+    private String[] txtthem=new String[] {"新店特惠","低价出两张电影票","台球"};
+    private String[] txtContent=new String[]{"荣记餐馆开业大酬宾，满500减50，快来进店品尝吧！\n地点：洪辰商业步行街",
+            "11月11日晚六点场，《生化危机-终章》\n地点：万达影视城","为回馈新老顾客，办会员充多少送多少\n地点：北校小小台球厅"};
+    private String[] txtName=new String[]{"仁豪","从头再来","北校扛把子"};
+    private String[] phone=new String[]{"15376576852","17895264275","153333257544"};
 
     public EntertainmentAdapter(Context context) {
         this.mContext=context;
