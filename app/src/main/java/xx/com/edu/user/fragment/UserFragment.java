@@ -4,6 +4,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
+import xx.com.edu.R;
 import xx.com.edu.base.BaseFragment;
 
 /**
@@ -14,20 +15,16 @@ import xx.com.edu.base.BaseFragment;
  * @updateDes ${TODD}
  */
 public class UserFragment extends BaseFragment {
-     private TextView textView;
     @Override
     public View initView() {
-        textView=new TextView(mContext);
-
-        textView.setGravity(Gravity.CENTER);
-        textView.setTextSize(25);
-        return textView;
+        View view=View.inflate(mContext, R.layout.user_fragment,null);
+        return view;
     }
+
+
 
     @Override
     public void initData() {
-
         super.initData();
-        textView.setText("个人中心的内容");
     }
 }

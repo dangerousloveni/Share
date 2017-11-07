@@ -110,7 +110,5 @@
                 android:src="@drawable/mes_arrow" />
         </RelativeLayout>
 
-
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

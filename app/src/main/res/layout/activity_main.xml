@@ -6,14 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="xx.com.edu.MainActivity">
+    tools:context="xx.com.edu.MainActivity"
+    >
 
     <FrameLayout
         android:id="@+id/framelayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeee">
     <RadioGroup
         android:id="@+id/rg_main"
         android:padding="5dp"
@@ -22,7 +26,7 @@
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:background="@drawable/home_bottom_parent_bg"
-       >
+        >
         <RadioButton
             android:id="@+id/rb_home"
             style="@style/MainButtonStyle"
@@ -40,5 +44,6 @@
             android:drawableTop="@drawable/user_button_selector"
             android:text=" 个人中心" />
     </RadioGroup>
+</LinearLayout>
 
 </LinearLayout>
