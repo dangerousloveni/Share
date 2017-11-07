@@ -31,4 +31,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile project(':banner')
     compile 'com.zhy:magic-viewpager:1.0.1'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
 }

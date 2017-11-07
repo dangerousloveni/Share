@@ -1,6 +1,7 @@
 package xx.com.edu.home.fragment.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -57,6 +58,7 @@ public class  NewAdapter  extends BaseAdapter{
             viewHolder.txt_content= (TextView) convertView.findViewById(R.id.tv_Content);
               viewHolder.txt_phone=(TextView)convertView.findViewById(R.id.tv_phone);
             viewHolder.txt_name= (TextView) convertView.findViewById(R.id.tv_name);
+            viewHolder.txt_them.setTextColor(Color.parseColor("#2e32b2"));
             convertView.setTag(viewHolder);
 
         }
