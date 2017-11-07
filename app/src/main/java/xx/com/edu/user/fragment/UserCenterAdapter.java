@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import xx.com.edu.R;
-import xx.com.edu.message.fragment.MessageAdapter;
 
 /**
  * Created by SwordIng on 2017/11/7.

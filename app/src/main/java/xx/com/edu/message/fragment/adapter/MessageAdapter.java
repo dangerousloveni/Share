@@ -1,4 +1,4 @@
-package xx.com.edu.message.fragment;
+package xx.com.edu.message.fragment.adapter;
 
 import android.content.Context;
 import android.view.View;

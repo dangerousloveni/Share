@@ -1,4 +1,4 @@
-package xx.com.edu.message.fragment;
+package xx.com.edu.message.fragment.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ public class MessageReleaseActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mes_release);
+        setContentView(R.layout.mes_activity_release);
 
     }
 }
