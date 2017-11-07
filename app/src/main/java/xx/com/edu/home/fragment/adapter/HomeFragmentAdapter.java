@@ -26,6 +26,8 @@ import java.util.List;
 import xx.com.edu.MessageInfoActivity;
 import xx.com.edu.R;
 import xx.com.edu.home.fragment.bean.MessageBean;
+import xx.com.edu.message.fragment.activity.MessageListActivity;
+import xx.com.edu.message.fragment.activity.MessageReleaseActivity;
 
 /**
  * @author Administrator
@@ -162,6 +164,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
         private Context mContext;
         private GridView gv_channel;
         private ChannelAdapter adapter;
+        Intent intent;
 
         public ChannelViewHolder(Context context, View itemView) {
             super(itemView);
@@ -170,7 +173,21 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             gv_channel.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    Toast.makeText(mContext, "position" + i, Toast.LENGTH_SHORT).show();
+                    switch (i){
+                        case 0:
+                            intent=new Intent(mContext,MessageListActivity.class);
+                            intent.putExtra("position",i);
+                            mContext.startActivity(intent);
+                            break;
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            intent=new Intent(mContext,MessageReleaseActivity.class);
+                            mContext.startActivity(intent);
+                            break;
+                    }
                 }
             });
 
