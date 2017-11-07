@@ -17,12 +17,12 @@ import xx.com.edu.R;
 public class KnowledgeAdapter extends BaseAdapter {
 
     private final Context mContext;
-    private int[] images= new  int[] {R.drawable.userfragment_touxiang,R.drawable.userfragment_touxiang,R.drawable.userfragment_touxiang};
-    private String[] txtthem=new String[] {"新店特惠","快递兼职","发单兼职"};
-    private String[] txtContent=new String[]{"荣记餐馆开业",
-            "60名，男女不限，主要工作：快递分拣、扫描、打包等室内工作","招发单兼职人员四名，工资日结60，鸽子酱油尸体勿扰！"};
-    private String[] txtName=new String[]{"东阳、","东阳、","东阳、"};
-    private String[] phone=new String[]{"15333328275","15333328275","15333328275"};
+    private int[] images= new  int[] {R.drawable.temp_user13,R.drawable.temp_user14,R.drawable.tempuser15};
+    private String[] txtthem=new String[] {"跑步最适合的时间","什么是设计模式？","android教学视频分享"};
+    private String[] txtContent=new String[]{"晨起至早餐前 上早餐后2小时至午餐 下午餐后2小时至晚餐前  晚餐后2小时至日落前",
+            "设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结","http://pan.baidu.com/s/1pL2F 密码:nj"};
+    private String[] txtName=new String[]{"年少不戴花","无敌是多模寂寞","1打9"};
+    private String[] phone=new String[]{"187666451615","133050015575","177851542121"};
 
     public KnowledgeAdapter(Context context) {
         this.mContext=context;
