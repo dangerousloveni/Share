@@ -7,6 +7,9 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import xx.com.edu.R;
+import xx.com.edu.home.fragment.channeladapter.EmploymentAdapter;
+import xx.com.edu.home.fragment.channeladapter.EntertainmentAdapter;
+import xx.com.edu.home.fragment.channeladapter.KnowledgeAdapter;
 import xx.com.edu.message.fragment.adapter.AlreadyReceiveAdapter;
 import xx.com.edu.message.fragment.adapter.AlreadyReleaseAdapter;
 
@@ -35,6 +38,22 @@ public class MessageListActivity extends Activity{
 
             case 1:
                 textView.setText("我已接受");
+                gridView.setAdapter(new AlreadyReceiveAdapter(MessageListActivity.this));
+                break;
+            case 2:
+                textView.setText("就业");
+                gridView.setAdapter(new EmploymentAdapter(MessageListActivity.this));
+                break;
+            case 3:
+                textView.setText("娱乐");
+                gridView.setAdapter(new EntertainmentAdapter(MessageListActivity.this));
+                break;
+            case 4:
+                textView.setText("知识");
+                gridView.setAdapter(new KnowledgeAdapter(MessageListActivity.this));
+                break;
+            case 5:
+                textView.setText("其他");
                 gridView.setAdapter(new AlreadyReceiveAdapter(MessageListActivity.this));
                 break;
         }
