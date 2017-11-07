@@ -16,17 +16,11 @@ import xx.com.edu.R;
  * @updateAuthor $Author$
  * @updateDes ${TODD}
  */
-class  NewAdapter  extends BaseAdapter{
+class HotAdapter extends BaseAdapter{
 
      private final Context mContext;
-    private int[] images= new  int[] {R.drawable.user1,R.drawable.uesr2,R.drawable.user3};
-    private String[] txtthem=new String[] {"腾讯云校招大会","爱奇艺会员转卖","低价卖流量"};
-    private String[] txtContent=new String[]{"面向大四毕业的学生，时间2017年12月3号，地点创业园，希望软件学院的同学踊跃参加",
-    "低价会员专买，6块钱一个月，看上的加Q1254127856","湖南省流量5元10G，仅限联通"};
-    private String[] txtName=new String[]{"未来的马化腾","低价会员","卖流量的阿七"};
-    private String[] phone=new String[]{"173546546521","61845666","15719964443"};
 
-    public NewAdapter(Context context) {
+    public HotAdapter(Context context) {
            this.mContext=context;
     }
 
@@ -57,18 +51,8 @@ class  NewAdapter  extends BaseAdapter{
             viewHolder.txt_content= (TextView) convertView.findViewById(R.id.tv_Content);
               viewHolder.txt_phone=(TextView)convertView.findViewById(R.id.tv_phone);
             viewHolder.txt_name= (TextView) convertView.findViewById(R.id.tv_name);
-            convertView.setTag(viewHolder);
 
         }
-        else {
-            viewHolder= (ViewHolder) convertView.getTag();
-        }
-        viewHolder.imageView.setImageResource(images[position]);
-        viewHolder.txt_name.setText(txtName[position]);
-        viewHolder.txt_phone.setText(phone[position]);
-        viewHolder.txt_content.setText(txtContent[position]);
-        viewHolder.txt_them.setText(txtthem[position]);
-
 
 
         return convertView;

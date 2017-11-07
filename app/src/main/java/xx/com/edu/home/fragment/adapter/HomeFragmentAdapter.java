@@ -61,7 +61,10 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
         }
         if (viewType == NEW) {
             return new NewViewHolder(context, mLayoutInflater.inflate(R.layout.new_view, null));
-
+        }
+        if(viewType ==HOT)
+        {
+            return  new HotViewHolder(context,mLayoutInflater.inflate(R.layout.hot_view,null));
         }
         return null;
     }
@@ -114,13 +117,17 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             NewViewHolder newViewHolder = (NewViewHolder) holder;
             newViewHolder.setData();
 
+        }    if (getItemViewType(position) == HOT) {
+            HotViewHolder hotViewHolder = (HotViewHolder) holder;
+            hotViewHolder.setData();
+
         }
 
     }
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 5;
     }
 
     //得到类型
@@ -254,6 +261,22 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
                 }
             });
             act_viewpanger.setCurrentItem(1);
+        }
+    }
+
+    private class HotViewHolder extends RecyclerView.ViewHolder {
+        private  GridView gv_hot;
+        private  Context mContext;
+        private HotAdapter adpter;
+        public HotViewHolder(Context context, View itemView) {
+            super(itemView);
+            this.mContext=context;
+            gv_hot= (GridView) itemView.findViewById(R.id.gv_hot);
+        }
+        public void setData(){
+            adpter= new HotAdapter(mContext);
+            gv_hot.setAdapter(adpter);
+
         }
     }
 }
