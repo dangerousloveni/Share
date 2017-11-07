@@ -1,6 +1,7 @@
 package xx.com.edu.home.fragment.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
@@ -22,7 +23,9 @@ import com.zhy.magicviewpager.transformer.ScaleInTransformer;
 import java.util.ArrayList;
 import java.util.List;
 
+import xx.com.edu.MessageInfoActivity;
 import xx.com.edu.R;
+import xx.com.edu.home.fragment.bean.MessageBean;
 
 /**
  * @author Administrator
@@ -40,7 +43,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
     public static final int HOT = 4;
     private Context context;
     private LayoutInflater mLayoutInflater;
-
+    private static final String MESSAGE_BEAN ="messageBean" ;
     private int currentType = BANNER;
 
     public HomeFragmentAdapter(Context context) {
@@ -184,15 +187,31 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
         private Context mContext;
         private GridView gv_new;
         private NewAdapter adpter;
+        private int[] images= new  int[] {R.drawable.userphoto5,R.drawable.uesr2,R.drawable.user3};
+        private String[] txtthem=new String[] {"腾讯云校招大会","爱奇艺会员转卖","低价卖流量"};
+        private String[] txtContent=new String[]{"面向大四毕业的学生，时间2017年12月3号，地点创业园，希望软件学院的同学踊跃参加",
+                "低价会员专买，6块钱一个月，看上的加Q1254127856","湖南省流量5元10G，仅限联通"};
+        private String[] txtName=new String[]{"未来的马化腾","低价会员","卖流量的阿七"};
+        private String[] phone=new String[]{"173546546521","61845666","15719964443"};
 
         public NewViewHolder(Context context, View itemView) {
             super(itemView);
             this.mContext = context;
+
+
             gv_new = (GridView) itemView.findViewById(R.id.gv_new);
             gv_new.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Toast.makeText(mContext, "position" + i, Toast.LENGTH_SHORT).show();
+                    MessageBean message=new MessageBean();
+                    message.setIamgesID(images[i]);
+                    message.setTheme(txtthem[i]);
+                    message.setContent(txtContent[i]);
+                    message.setUserName(txtName[i]);
+                    message.setPhoneNumber(phone[i]);
+
+                    startGoodsInfoActivity(message);
                 }
             });
 
@@ -203,6 +222,14 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
             adpter = new NewAdapter(mContext);
             gv_new.setAdapter(adpter);
         }
+
+    }
+
+    private void startGoodsInfoActivity(MessageBean goodsBean) {
+        Intent intent=new Intent(context, MessageInfoActivity.class);
+        intent.putExtra(MESSAGE_BEAN,goodsBean);
+         context.startActivity(intent);
+
 
     }
 
