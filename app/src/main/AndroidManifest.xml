@@ -17,8 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"></activity>
-<activity android:name=".message.fragment.MessageReleaseActivity"/>
-
+        <activity android:name=".message.fragment.activity.MessageListActivity"/>
+        <activity android:name=".message.fragment.activity.MessageReleaseActivity"/>
     </application>
 
 </manifest>
